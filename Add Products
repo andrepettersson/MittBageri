@@ -1,0 +1,14 @@
+INSERT INTO Products (Name)
+VALUES
+(
+    'Kakor'
+),
+(
+    'Bröd'
+),
+(
+    'Tårtor'
+),
+(
+    'Bakelser'
+);

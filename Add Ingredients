@@ -1,0 +1,33 @@
+INSERT INTO Ingredients(ItemNumber, Name, PricePerKg, SupplierId)
+VALUES
+(
+    'A11',
+    'Mjöl',
+    15,
+    1
+),
+(
+    'B12',
+    'Ägg',
+    35,
+    1
+),
+(
+    'C13',
+    'Jäst',
+    500,
+    1
+),
+(
+    'D14',
+    'Socker',
+    20,
+    2
+),
+(
+    'E15',
+    'Smör',
+    120,
+    2
+);
+
