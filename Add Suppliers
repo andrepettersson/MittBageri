@@ -1,3 +1,16 @@
 INSERT INTO Suppliers (Name, Address, ContactPerson, Phone, Email)
 VALUES
-
+(
+    'Orga Kvarn',
+    'Industrivägen 11',
+    'Markus Jönsson',
+    '075-5566998',
+    'MackeJ@gmail.com'
+),
+(
+    'Dansukker',
+    'Skolvägen 8',
+    'Ida Jönsson',
+    '078-99663325',
+    'Idajonsson@gmail.com'
+);

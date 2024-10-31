@@ -31,6 +31,14 @@ CREATE TABLE IF NOT EXISTS Recipes(
     UNIQUE (ProductId, IngId)
 );
 
+CREATE TABLE IF NOT EXISTS Inventory(
+    InventoryId INTEGER PRIMARY KEY AUTOINCREMENT,
+    IngId INTEGER NOT NULL,
+    Purchased INTEGER NOT NULL,
+    Stock INTEGER NOT NULL,
+    FOREIGN KEY (ingId) REFERENCES Ingredients(IngId),
+);
+
 
 
 
