@@ -9,10 +9,11 @@ FROM Inventory
 INNER JOIN Ingredients ON Inventory.IngId = Ingredients.IngId
 INNER JOIN Recipes ON Ingredients.IngId = Recipes.IngId
 INNER JOIN Products ON Products.ProductId = Recipes.ProductId
-INNER JOIN Suppliers ON Ingredients.SupplierId = Suppliers.SupplierId
+INNER JOIN Suppliers ON Ingredients.SupplierId = Suppliers.SupplierId;
 
 
 SELECT * FROM Products;
 SELECT * FROM Suppliers;
 SELECT * FROM Recipes;
 SELECT * FROM Ingredients;
+SELECT * FROM Inventory;
