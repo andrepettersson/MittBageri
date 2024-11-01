@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS Ingredients(
     IngId INTEGER PRIMARY KEY AUTOINCREMENT,
     ItemNumber TEXT NOT NULL,
     Name TEXT NOT NULL,
-    PricePerKg TEXT NOT NULL,
+    PricePerKg FLOAT NOT NULL,
     SupplierId INTEGER NOT NULL,
     FOREIGN KEY (SupplierId) REFERENCES Suppliers(SupplierId)
 );
@@ -36,8 +36,10 @@ CREATE TABLE IF NOT EXISTS Inventory(
     IngId INTEGER NOT NULL,
     Purchased INTEGER NOT NULL,
     Stock INTEGER NOT NULL,
-    FOREIGN KEY (ingId) REFERENCES Ingredients(IngId),
+    FOREIGN KEY (ingId) REFERENCES Ingredients(IngId)
 );
+
+
 
 
 
