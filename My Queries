@@ -1,26 +1,17 @@
--- Infomration om vad produkterna innehåller
-SELECT
-Products.Name,
-Ingredients.Name,
-Recipes.Quantity
-FROM Products
-INNER JOIN Recipes ON Recipes.ProductId = Products.ProductId
-INNER JOIN Ingredients ON Recipes.IngId = Ingredients.IngId
-
 --Lista på Råvaror,leverantörer och kostnad
 SELECT
-Suppliers.Name,
-Ingredients.Name,
-Ingredients.PricePerKg
+Suppliers.Name AS Leveratör,
+Ingredients.Name AS Råvaror,
+Ingredients.PricePerKg AS PrisPerKg
 FROM Ingredients
 INNER JOIN Suppliers ON Ingredients.SupplierId = Suppliers.SupplierId
 
 -- Se vad och hur mycket som finns i lager
 SELECT 
-Ingredients.Name,
-Inventory.Purchased,
-Inventory.Stock,
-Suppliers.Name
+Ingredients.Name AS Namn,
+Inventory.Purchased AS Köpt,
+Inventory.Stock AS Lager,
+Suppliers.Name AS Leverantör
 FROM Inventory
 INNER JOIN Ingredients ON Inventory.IngId = Ingredients.IngId
 INNER JOIN Suppliers ON Ingredients.SupplierId = Suppliers.SupplierId
@@ -28,28 +19,24 @@ INNER JOIN Suppliers ON Ingredients.SupplierId = Suppliers.SupplierId
 
 -- Se Produkterna,innehåll av produkterna och leverantörerna
 SELECT 
-Products.Name,
-Ingredients.Name,
-Suppliers.Name
+Products.Name AS Produkt,
+Ingredients.Name AS Råvaror,
+Suppliers.Name AS Leverantör
 FROM Products
 INNER JOIN Recipes ON Products.ProductId = Recipes.ProductId
 INNER JOIN Ingredients ON Recipes.IngId = Ingredients.IngId
 INNER JOIN Suppliers ON Ingredients.SupplierId = Suppliers.SupplierId
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+--Recept
+SELECT
+Recipes.ProductId AS Recept,
+Products.Name AS Produkt,
+Ingredients.Name AS Råvaror,
+Recipes.Quantity AS Mängd
+FROM Recipes
+INNER JOIN Products On Recipes.ProductId = Products.ProductId
+INNER JOIN Ingredients ON recipes.IngId = Ingredients.IngId
 
 
 SELECT * FROM Suppliers;

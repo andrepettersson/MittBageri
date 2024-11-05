@@ -1,9 +1,9 @@
 INSERT INTO Recipes (ProductId, IngId, Quantity)
 VALUES
 (
-    1,
-    1,
-    400
+   1,
+   1,
+   400
 ),
 (
    1,
