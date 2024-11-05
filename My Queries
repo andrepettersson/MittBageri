@@ -1,0 +1,58 @@
+-- Infomration om vad produkterna innehåller
+SELECT
+Products.Name,
+Ingredients.Name,
+Recipes.Quantity
+FROM Products
+INNER JOIN Recipes ON Recipes.ProductId = Products.ProductId
+INNER JOIN Ingredients ON Recipes.IngId = Ingredients.IngId
+
+--Lista på Råvaror,leverantörer och kostnad
+SELECT
+Suppliers.Name,
+Ingredients.Name,
+Ingredients.PricePerKg
+FROM Ingredients
+INNER JOIN Suppliers ON Ingredients.SupplierId = Suppliers.SupplierId
+
+-- Se vad och hur mycket som finns i lager
+SELECT 
+Ingredients.Name,
+Inventory.Purchased,
+Inventory.Stock,
+Suppliers.Name
+FROM Inventory
+INNER JOIN Ingredients ON Inventory.IngId = Ingredients.IngId
+INNER JOIN Suppliers ON Ingredients.SupplierId = Suppliers.SupplierId
+
+
+-- Se Produkterna,innehåll av produkterna och leverantörerna
+SELECT 
+Products.Name,
+Ingredients.Name,
+Suppliers.Name
+FROM Products
+INNER JOIN Recipes ON Products.ProductId = Recipes.ProductId
+INNER JOIN Ingredients ON Recipes.IngId = Ingredients.IngId
+INNER JOIN Suppliers ON Ingredients.SupplierId = Suppliers.SupplierId
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SELECT * FROM Suppliers;
+SELECT * FROM Recipes;
+SELECT * FROM Ingredients;
+SELECT * FROM Inventory;
