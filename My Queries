@@ -37,9 +37,3 @@ Recipes.Quantity AS Mängd
 FROM Recipes
 INNER JOIN Products On Recipes.ProductId = Products.ProductId
 INNER JOIN Ingredients ON recipes.IngId = Ingredients.IngId
-
-
-SELECT * FROM Suppliers;
-SELECT * FROM Recipes;
-SELECT * FROM Ingredients;
-SELECT * FROM Inventory;
