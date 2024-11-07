@@ -27,8 +27,7 @@ CREATE TABLE IF NOT EXISTS Recipes(
     IngId INTEGER NOT NULL,
     Quantity INTEGER NOT NULL,
     FOREIGN KEY (ProductId) REFERENCES Products(ProductId),
-    FOREIGN KEY (IngId) REFERENCES Ingredients(IngId),
-    UNIQUE (ProductId, IngId)
+    FOREIGN KEY (IngId) REFERENCES Ingredients(IngId)
 );
 
 CREATE TABLE IF NOT EXISTS Inventory(
