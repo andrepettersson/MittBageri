@@ -1,3 +1,5 @@
+DELETE FROM Recipes;
+
 INSERT INTO Recipes (ProductId, IngId, Quantity)
 VALUES
 (

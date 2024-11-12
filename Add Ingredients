@@ -1,3 +1,5 @@
+DELETE FROM Ingredients;
+
 INSERT INTO Ingredients(ItemNumber, Name, PricePerKg, SupplierId)
 VALUES
 (

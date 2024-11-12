@@ -1,3 +1,5 @@
+DELETE FROM Inventory;
+
 INSERT INTO Inventory (IngId, Purchased, Stock)
 VALUES
 (

@@ -1,3 +1,5 @@
+DELETE FROM Suppliers;
+
 INSERT INTO Suppliers (Name, Address, ContactPerson, Phone, Email)
 VALUES
 (
